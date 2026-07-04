@@ -1,0 +1,13 @@
+feature,importance
+cat__PlacementTraining_No,0.67871095108374
+num__AptitudeTestScore,0.6006298305096932
+cat__ExtracurricularActivities_No,0.5903544557980541
+num__SSC_Marks,0.2964056997916182
+num__HSC_Marks,0.27136409308403847
+num__SoftSkillsRating,0.2661758049011468
+num__CGPA,0.25081381122487817
+num__Projects,0.22554016900818322
+cat__PlacementTraining_Yes,0.22457439164430257
+cat__ExtracurricularActivities_Yes,0.1362178963586174
+num__Workshops_Certifications,0.10597783643036561
+num__Internships,0.02371380359107252
