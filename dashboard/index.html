@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Employability Prediction | ML Dashboard</title>
+    <meta name="description" content="Interactive dashboard exploring student employability drivers and ML model performance for campus placement prediction." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Student Employability Prediction</h1>
+          <p>Interactive ML dashboard &middot; campus recruitment analytics</p>
+        </div>
+        <span class="live-pill"><span class="dot"></span> Live preview &middot; public dataset</span>
+      </header>
+
+      <section class="filters" aria-label="Filters">
+        <div class="filter">
+          <label for="trainingFilter">Placement training</label>
+          <select id="trainingFilter" class="filter-select"></select>
+        </div>
+        <div class="filter">
+          <label for="extraFilter">Extracurricular</label>
+          <select id="extraFilter" class="filter-select"></select>
+        </div>
+        <div class="filter">
+          <label for="internFilter">Has internship</label>
+          <select id="internFilter" class="filter-select"></select>
+        </div>
+        <div class="filter">
+          <label for="cgpaFilter">CGPA band</label>
+          <select id="cgpaFilter" class="filter-select"></select>
+        </div>
+        <button id="clearFiltersBtn" class="clear-btn" type="button">Reset filters</button>
+      </section>
+
+      <section class="kpi-grid" aria-label="Key metrics">
+        <article class="kpi-card">
+          <div class="label">Students in view</div>
+          <div class="value" id="studentsKpi">—</div>
+          <div class="sub" id="studentsSub">filtered population</div>
+        </article>
+        <article class="kpi-card">
+          <div class="label">Placement rate</div>
+          <div class="value" id="rateKpi">—</div>
+          <div class="sub" id="rateSub">share placed</div>
+        </article>
+        <article class="kpi-card">
+          <div class="label">Average CGPA</div>
+          <div class="value" id="cgpaKpi">—</div>
+          <div class="sub" id="cgpaSub">academic indicator</div>
+        </article>
+        <article class="kpi-card">
+          <div class="label">Average aptitude</div>
+          <div class="value" id="aptKpi">—</div>
+          <div class="sub" id="aptSub">aptitude test score</div>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Placement rate by training</h2>
+          <p class="hint">Effect of placement training on getting placed.</p>
+          <svg id="chartTraining" class="chart"></svg>
+        </article>
+        <article class="panel">
+          <h2>Placement rate by extracurricular</h2>
+          <p class="hint">Students with vs without extracurricular activities.</p>
+          <svg id="chartExtra" class="chart"></svg>
+        </article>
+        <article class="panel">
+          <h2>Placement rate by internship</h2>
+          <p class="hint">Students with at least one internship vs none.</p>
+          <svg id="chartIntern" class="chart"></svg>
+        </article>
+        <article class="panel">
+          <h2>Placement rate by CGPA band</h2>
+          <p class="hint">How academic performance relates to placement.</p>
+          <svg id="chartCgpa" class="chart"></svg>
+        </article>
+        <article class="panel">
+          <h2>Average aptitude by outcome</h2>
+          <p class="hint">Aptitude test score for placed vs not placed students.</p>
+          <svg id="chartAptitude" class="chart"></svg>
+        </article>
+        <article class="panel">
+          <h2>Feature importance (model)</h2>
+          <p class="hint">Top drivers from the best placement model.</p>
+          <div id="impactList"></div>
+        </article>
+      </section>
+
+      <h2 class="section-title">Model performance</h2>
+      <article class="panel">
+        <p class="hint">Comparison of candidate models on test and validation splits. Best ROC AUC highlighted.</p>
+        <div id="modelTable"></div>
+      </article>
+
+      <footer class="footer">
+        Public dashboard &middot; built from the CC0 Campus Recruitment dataset &middot; no PII, no trained-model weights published.
+      </footer>
+    </div>
+
+    <div id="chartTooltip" class="chart-tooltip" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

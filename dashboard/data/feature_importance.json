@@ -1,0 +1,50 @@
+[
+  {
+    "feature": "cat__PlacementTraining_No",
+    "importance": 0.67871095108374
+  },
+  {
+    "feature": "num__AptitudeTestScore",
+    "importance": 0.6006298305096932
+  },
+  {
+    "feature": "cat__ExtracurricularActivities_No",
+    "importance": 0.5903544557980541
+  },
+  {
+    "feature": "num__SSC_Marks",
+    "importance": 0.2964056997916182
+  },
+  {
+    "feature": "num__HSC_Marks",
+    "importance": 0.27136409308403847
+  },
+  {
+    "feature": "num__SoftSkillsRating",
+    "importance": 0.2661758049011468
+  },
+  {
+    "feature": "num__CGPA",
+    "importance": 0.25081381122487817
+  },
+  {
+    "feature": "num__Projects",
+    "importance": 0.22554016900818322
+  },
+  {
+    "feature": "cat__PlacementTraining_Yes",
+    "importance": 0.22457439164430257
+  },
+  {
+    "feature": "cat__ExtracurricularActivities_Yes",
+    "importance": 0.1362178963586174
+  },
+  {
+    "feature": "num__Workshops_Certifications",
+    "importance": 0.10597783643036561
+  },
+  {
+    "feature": "num__Internships",
+    "importance": 0.02371380359107252
+  }
+]
